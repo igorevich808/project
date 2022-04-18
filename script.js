@@ -4,11 +4,16 @@ const personalMovieDB = {
    movies : {},
    actors : {},
    genres : [],
-   private : false,
-}
+   private : false
+};
 
-const lastView = prompt ('Один из последних просмотренных фильмов?');
-const grade = +prompt ('На сколько оцените его?');
+let lastView = prompt ('Один из последних просмотренных фильмов?');
+let grade = +prompt ('На сколько оцените его?');
+
+personalMovieDB.movies[lastView] = grade;
+
+lastView = prompt ('Один из последних просмотренных фильмов?');
+grade = +prompt ('На сколько оцените его?');
 
 personalMovieDB.movies[lastView] = grade;
 
